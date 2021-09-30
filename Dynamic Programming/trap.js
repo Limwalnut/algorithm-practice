@@ -21,7 +21,6 @@ var trap = function (height) {
   for (let i = n-2; i >= 0; i--) {
     rightMax[i] = Math.max(rightMax[i + 1], height[i + 1])
   }
-  console.log(leftMax, rightMax)
   let result = 0
   for (let i = 0; i < n; i++) {
     if (Math.min(leftMax[i], rightMax[i]) > height[i]) {
